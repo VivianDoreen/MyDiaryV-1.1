@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Mobile Styles */
+  @media only screen and (max-width: 400px) {
+    body {
+      background-color: #F09A9D; /* Red */
+        }
+    h1{
+        font-size: 35px;
+    }
+    section{
+        width: 80%;
+      }
+    .div1 label{
+        font-size: 17px;
+    }
+    .div1 input[type = "submit"]{
+        width: 50%;
+        font-size: 14px;    
+    }
+    }
+
+  /* Tablet Styles */
+  @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+      background-color: #F5CF8E; /* Yellow */
+    }
+    h1{
+        font-size: 40px;
+    }
+    section{
+        width: 60%;
+      }
+      .div1 label{
+        font-size: 17px;
+    }
+    .div1 input[type = "submit"]{
+        width: 20%;
+    }
+  }
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 961px) {
+    body {
+      background-color: #B2D6FF; /* Blue */
+    }
+    h1{
+        font-size: 40px;
+    }
+    section{
+        width: 40%;
+      }
+      .div1 input[type = "submit"]{
+        width: 20%;
+    }    
+  }
+  body{
+      background-image: url("../img/diary5v3.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  header{
+      width:100%;
+  }
+
+  h1{
+    font-family: Monotype Corsiva;
+    font-weight: 800;
+    color: #282828;
+    text-shadow: 2px 0 0 #f1e8cf;
+    margin:10px 10px;
+  }
+  section{
+    margin: 0px auto;
+    text-align: center;
+    background-color:#f1e8cf;
+  }
+  section .signIn{
+    width: 100%;
+    margin: 60px auto;
+    background-color: #282828;
+    color: #ffffff;
+    padding: 20 2px 40px 2px;
+  }
+  section form{
+    width: 80%;
+    margin:0px auto;
+  }
+  section .p1{
+      text-transform: uppercase;
+      width: 100%;
+      border-bottom: 1px solid rgb(95, 67, 19);
+      margin-bottom:20px;
+      color: #f7f0e0;
+      font-size: 25px;
+      font-weight: bolder;
+      padding-bottom: 5px;
+  }
+  .div1{
+      width: 100%;
+  }
+  
+  .div1 input{
+    width: 100%;
+    color: #000000;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    padding:8px;
+}
+  .div1 label{
+    display: block;
+    width: 100%;
+    color: #f0e6cc;
+    margin-bottom: 2px;
+}
+
+.div1 label a{
+    display: inline;
+    width: 100%;
+    color: orange;
+    margin-bottom: 2px;
+    text-decoration: none;
+}
+
+.div1 label .createaccountlink{
+    display: inline;
+    text-decoration: underline;
+    color: #a89660;
+}
+
+.div1 input[type = "text"]{
+    border-radius: 8px;
+    background-color: #ccc;
+}
+
+.div1 input[type = "password"]{
+    border-radius: 8px;
+    background-color: #ccc;
+}
+
+.div1 input[type = "submit"]{
+    -webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	color:#333;
+	background-color:#a89660;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border:none;
+	font-family:'Helvetica Neue',Arial,sans-serif;
+	font-size:16px;
+	font-weight:700;
+	height:32px;
+	padding:4px 16px;
+	text-shadow:#FE6 0 1px 0;
+}
+  footer{
+        width:100%;
+        position:absolute;
+        bottom:0;
+        height:41px;   /* Height of the footer */
+        background:#282828
+  }
+  footer p{
+      margin-top:10px;
+      text-align: center;
+      color:#ffffff;
+  }
+  
