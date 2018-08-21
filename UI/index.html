@@ -1,0 +1,93 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1> MyDiary</h1>
+    </header>
+    <section>
+        <div class="signIn">
+            <p class="p2" >Sign In</p>
+            <form method="POST" onsubmit ="return validate();" id="form1" name = "form1" action="add_entry.html">
+                <div class="div1">
+                    <label id="username_error"><div class="val_error"></div></label>
+                    <label>Username</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div class="div1">
+                    <label id="Password_error"></label>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <div class="div1">
+                        <input type="submit" name="submit" value="Login">
+                </div>     
+                <div class="div1">
+                        <label><a href = "#">Forgot Username or Password?</a></label>
+                        <label>Not a member? Click <a href = "register.html" class="createaccountlink">Here</a> to create an account</label>
+                </div>           
+            </form>
+        </div>
+    </section>
+   <footer>
+       <p>Designed  by Mavelpro SMC Ltd</p>
+   </footer>
+
+</body>  
+</html>
+<script>
+ //Getting all input text objects
+ var username = document.forms["form1"]["username"];
+ var password = document.forms["form1"]["password"];
+
+ //Getting all error_display messages
+ var username_error = document.getElementById('username_error');
+ var Password_error = document.getElementById('Password_error');
+
+ //Setting all eventListners
+ username.addEventListener("blur", usernameVerify, true);
+ password.addEventListener("blur", passwordVerify, true);
+ 
+ //Validation function
+ function validate(){
+   //Student Id Validation
+   if (username.value == "") {
+    username.style.border = "1px solid red";
+    username_error.textContent = "Username* required";
+    username.focus();
+     return false;
+   }  
+   
+   if (username.value.match("/^[a-zA-Z ]*$/")){
+    username.style.border = "1px solid red";
+    username_error.textContent = "Username* required, Only names required";
+    username.focus();
+     return false;
+   }
+   if (password.value == "") {
+    password.style.border = "1px solid red";
+    Password_error.textContent = "Password* required";
+    password.focus();
+     return false;
+   }
+ }
+
+ //Eventhandler functions
+ function usernameVerify(){
+   if (username.value !="") {
+    username.style.border = "1px solid #7c7575";
+    username_error.innerHTML = "";
+     return true;
+   }
+ }
+ 
+ function passwordVerify(){
+   if (password.value !="") {
+    password.style.border = "1px solid #7c7575";
+    Password_error.innerHTML = "";
+     return true;
+   }
+ }
+</script>

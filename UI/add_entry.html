@@ -1,0 +1,89 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleothers.css">
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <h1>MyDiary</h1>
+         </div>
+         <div id = "logout_link">
+            <ul class = "ad_settings">
+                <li class = "li_ad_settings"><a href = "#">NabuloVivian</a>
+                    <ul class = "ad_settings_sub_list">
+                        <li><a href = "index.html">LogOut</a></li>					
+                        <li><a href = "user_profile.html">Profile</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="view_entry.html">VIEW ENTRY</a></li>
+                <li class="current"><a href="add_entry.html">ADD ENTRY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="signIn">
+            <p class="p2" >Add Entry</p>
+            <form method="POST" onsubmit ="return validate();" id="form1" name = "form1" action="index.html">
+                <p id="demo"></p>
+                <div class="div1">
+                        <label id="topic_error"></label>
+                        <label>Topic</label>
+                        <input type="text" name="topic" id="topic">
+                </div>
+                <div class="div1">
+                    <label id="content_error"></label>
+                    <textarea name="message" id="message" rows="8" cols="57" placeholder="Message"></textarea>
+                </div>
+                <div class="div1">
+                        <input type="submit" name="submit" value="Register">
+                </div>        
+            </form>
+        </div>
+    </section>
+<script>
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d;
+
+        function validate(){
+        var topic = document.getElementById('topic');
+        var message = document.getElementById('message');
+        if (inputAlphabet(topic, "* For your diary title, please use alphabets only *")) {
+            if (lengthDefine(message, 15, 100)) {
+            return true;
+            }
+        }
+        return false;
+        }
+    // Function that checks whether input text is an alphabetic character or not.
+    function inputAlphabet(inputtext, alertMsg) {
+    var alphaExp = /^[a-zA-Z]+$/;
+    if (inputtext.value.match(alphaExp)) {
+    return true;
+    } else {
+    document.getElementById('topic_error').innerText = alertMsg; // This segment displays the validation rule for name.
+    //alert(alertMsg);
+    inputtext.focus();
+    return false;
+    }
+    }
+
+        // Function that checks whether the input characters are restricted according to defined by user.
+function lengthDefine(inputtext, min, max) {
+    var uInput = inputtext.value;
+    if (uInput.length >= min && uInput.length <= max) {
+    return true;
+    } else {
+    document.getElementById('content_error').innerText = "* Please enter between " + min + " and " + max + " characters *"; // This segment displays the validation rule for username
+    inputtext.focus();
+    return false;
+    }
+    }
+</script>
+</body>  
+</html>
