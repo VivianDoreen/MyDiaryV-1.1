@@ -1,0 +1,128 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleothers.css">
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <h1>MyDiary</h1>
+         </div>
+         <div id = "logout_link">
+            <ul class = "ad_settings">
+                <li class = "li_ad_settings"><a href = "#">NabuloVivian</a>
+                    <ul class = "ad_settings_sub_list">
+                        <li><a href = "index.html">LogOut</a></li>					
+                        <li><a href = "user_profile.html">Profile</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="view_entry.html">VIEW ENTRY</a></li>
+                <li class="current"><a href="add_entry.html">ADD ENTRY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="user_profile">
+            <div id = "profile_pic"><img src="img/nabulo.png" width="130px" height="125px" style="padding: 0px;"/></div>
+            <table id="profile_info">
+                <tr>
+                    <th colspan="2">
+                        Nabulo Vivian Profile
+                    </th>
+                </tr>
+                <tr>
+                    <td class="tdtitle">Name:</td><td>Nabulo Vivian Doreen</td>
+                </tr>
+                <tr>
+                    <td class="tdtitle">Date of registration:</td><td>20/08/2018</td>
+                </tr>
+                <tr>
+                    <td class="tdtitle">Number of entries:</td><td>8</td>
+                </tr>
+                <tr>
+                    <td class="tdtitle">REMINDER</td>
+                    <td class="tdtitle">
+                            <button class="collapsible">Add New Reminder</button>
+                            <div class="content">
+                              <p style="padding:10px 0px;">
+                              <select id='t-std_class' name='std_class'">
+                                            <option value=''>When should we remind you</option>
+                                            <option value=''>EveryDay</option>
+                                            <option value=''>Every other day</option>
+                                            <option value=''>Once a week</option>
+                                            <option value=''>Once a month</option>
+                                </select><br/>
+                                <select id='t-std_class' name='std_class'">
+                                            <option value=''>What day you want your reminders</option>
+                                            <option value=''>1st</option>
+                                            <option value=''>2nd</option>
+                                            <option value=''>3rd</option>
+                                            <option value=''>4th</option>
+                                            <option value=''>5th</option>
+                                            <option value=''>6th</option>
+                                            <option value=''>7th</option>
+                                            <option value=''>8th</option>
+                                            <option value=''>9st</option>
+                                            <option value=''>10th</option>
+                                            <option value=''>11th</option>
+                                            <option value=''>12th</option>
+                                            <option value=''>13th</option>
+                                            <option value=''>14th</option>
+                                            <option value=''>15th</option>
+                                            <option value=''>16th</option>
+                                            <option value=''>17th</option>
+                                            <option value=''>18th</option>
+                                            <option value=''>19th</option>
+                                            <option value=''>20th</option>
+                                            <option value=''>21st</option>
+                                            <option value=''>22nd</option>
+                                            <option value=''>23rd</option>
+                                            <option value=''>24th</option>
+                                            <option value=''>25th</option>
+                                            <option value=''>26th</option>
+                                            <option value=''>27th</option>
+                                            <option value=''>30th</option>
+                                            <option value=''>31st</option>
+                                </select><br/>
+                                <select id='t-std_class' name='std_class'">
+                                            <option value=''>What time do you want your reminders</option>
+                                            <option value=''>In the morning</option>
+                                            <option value=''>At noon</option>
+                                            <option value=''>In the evening</option>
+                                            <option value=''>At a specific time</option>
+                                </select></br>
+                                <input type = "submit" value = "save changes">
+                             </p>
+                            </div>                
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="2">We’ll help you remember to write in your diary by sending you an email reminder.</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</body>  
+</html>
+
+<script type="text/javascript">
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>

@@ -1,0 +1,127 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleothers.css">
+    <script src="formvalid.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <h1>MyDiary</h1>
+         </div>
+         <div id = "logout_link">
+                <ul class = "ad_settings">
+                    <li class = "li_ad_settings"><a href = "#">NabuloVivian</a>
+                        <ul class = "ad_settings_sub_list">
+                            <li><a href = "index.html">LogOut</a></li>					
+                            <li><a href = "user_profile.html">Profile</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+             <nav>
+            <ul>
+                <li><a href="view_entry.html">VIEW ENTRY</a></li>
+                <li class="current"><a href="add_entry.html">ADD ENTRY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="signIln">
+            <p class="p2" ><font color = "#f6f6f6">Here is your entry list</font></p>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for diary titles.." title="Type in a name">
+
+                <table id="myTable">
+                    <tr class="header">
+                      <th style="width:60%;">Title</th>
+                      <th style="width:40%;">Action</th>
+                    </tr>
+                    <tr>
+                      <td>Andela Women Initiative</td>
+                      <td>
+                        <a href="view_content.html" class="anchor1">View </a>|
+                        <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                        <a href="#" class="anchor1">Delete</a></td>
+                    </tr>
+                    <tr>
+                      <td>My birthday</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Daily schedule</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Love spell</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>The last time I did something</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Andela open day</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>My first achievement</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>My first achievement</td>
+                      <td>
+                          <a href="view_content.html" class="anchor1">View </a>|
+                          <a href="edit_entry.html" class="anchor1">Edit</a> | 
+                          <a href="#" class="anchor1">Delete</a>
+                      </td>
+                    </tr>
+                  </table>
+
+        </div>
+    </section>
+<script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+</body>  
+</html>
