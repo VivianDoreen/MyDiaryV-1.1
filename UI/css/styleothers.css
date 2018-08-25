@@ -426,7 +426,6 @@ label #username_error{
     font-size: 15px;
 }
 
-
 .active, .collapsible:hover {
     font-weight: bold;
 }
@@ -457,7 +456,7 @@ label #username_error{
         position:absolute;
         height:41px;    
         background:#282828;
-        left: 0 ; right: 0;bottom: 0;
+        bottom: 0;
   }
   footer p{
       margin-top:10px;
