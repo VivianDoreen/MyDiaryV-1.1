@@ -1,0 +1,4 @@
+{
+  "test_task.py": true,
+  "test_task.py::TestCalc::test_all_entries": true
+}

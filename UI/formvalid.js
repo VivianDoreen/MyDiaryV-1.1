@@ -13,6 +13,10 @@ function validate(){
         uname.focus();
         return false;
         }
+        else if(email.value.length == 0)document.getElementById('head').innerText = "* All fields are mandatory *"; // This segment displays the validation rule for all fields
+        email.focus();
+        return false;
+    }
     if (inputAlphabet(uname, "* For your name please use alphabets only *")) {
         if (inputAlphabetUsername(username, "* For your username please use alphabets only *")) {
             if (lengthDefine(password,  6, 20)) {
