@@ -91,6 +91,7 @@ def delete_entry(entry_id):
         abort(404)
     entries.remove(entry[0])
     return jsonify({"Result": 'entry successfully deleted'})
+    
 if __name__ == '__main__':
     #Debug will print out possible Python errors on the web page helping us trace the errors
     app.run(debug=True, port=8080)
